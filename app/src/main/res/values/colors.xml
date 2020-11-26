@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="tempcolorPrimary">#000080</color>
+    <color name="tempcolorPrimaryDark">#00008b</color>
+    <color name="pinky">#cc4971</color>
+    <color name="good_grey">#9a9c9a</color>
+    <color name="gif_blue">#0082c4</color>
+    <color name="light_blue">#ADD8E6</color>
+
+    <color name="dashboard_back">#eff4f9</color>
+    <color name="public_doubts_back">#4b57d6</color>
+    <color name="book_appointments_back">#f69c55</color>
+    <color name="my_answers_back">#5ec6b2</color>
+    <color name="my_doubts_back">#f17380</color>
+    <color name="blue_button">#0277fe</color>
+</resources>

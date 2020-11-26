@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Record">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <TextView
+           android:id="@+id/status_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="10dp"
+           android:text="Lets Record"
+           android:textSize="20dp"
+           android:textStyle="bold"
+           android:layout_centerInParent="true"/>
+
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_centerHorizontal="true"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="20dp"
+           >
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/start_recording"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginHorizontal="10dp"
+                   android:src="@drawable/ic_microphone"
+                   android:clickable="true"
+                   android:focusable="true"
+                   android:background="@drawable/ripple_effect_circle"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Record"
+                   android:layout_gravity="center"/>
+
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/pause_recording"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginHorizontal="10dp"
+                   android:src="@drawable/ic_pause"
+                   android:clickable="true"
+                   android:focusable="true"
+                   android:background="@drawable/ripple_effect_circle"
+                   />
+
+               <TextView
+                   android:id="@+id/pause_text"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Pause"
+                   android:layout_gravity="center"/>
+
+
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+
+               <de.hdodenhof.circleimageview.CircleImageView
+                   android:id="@+id/stop_recording"
+                   android:layout_width="50dp"
+                   android:layout_height="50dp"
+                   android:layout_marginHorizontal="10dp"
+                   android:src="@drawable/ic_stop"
+                   android:clickable="true"
+                   android:focusable="true"
+                   android:background="@drawable/ripple_effect_circle"
+                   />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Stop"
+                   android:layout_gravity="center"/>
+
+
+           </LinearLayout>
+
+
+
+
+       </LinearLayout>
+
+
+   </RelativeLayout>
+
+</FrameLayout>

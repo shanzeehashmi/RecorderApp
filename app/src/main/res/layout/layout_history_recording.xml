@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/recording_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/ripple_effect_round"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/play_pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_circle"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/recording_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recording one"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_marginHorizontal="10dp"
+            android:layout_gravity="center"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

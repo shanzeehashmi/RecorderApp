@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AppCompat.DayNight">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/tab_layout"
+        android:layout_above="@id/media_player_card"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/media_player_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="05dp"
+        app:cardCornerRadius="20dp">
+
+
+    <RelativeLayout
+        android:id="@+id/media_player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp"
+            android:alpha="0.5"
+            android:layout_marginTop="10dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/shuffle_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:padding="05dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_effect_round"
+                android:alpha="0.4"
+                android:src="@drawable/ic_shuffle"/>
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/repeat_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:padding="05dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:alpha="0.4"
+                android:background="@drawable/ripple_effect_round"
+                android:src="@drawable/ic_repeat"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/prev_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_effect_round"
+                android:padding="10dp"
+                android:src="@drawable/ic_previous"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/play_pause_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="80dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_play_circle"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/next_button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/ripple_effect_round"
+                android:src="@drawable/ic_next"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
