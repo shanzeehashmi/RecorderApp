@@ -10,9 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.zee.recorderapp.db.Database;
 import com.zee.recorderapp.db.Recording;
 import com.zee.recorderapp.db.dataaccessobject;
-import com.zee.recorderapp.fragments.Record;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Repository {

@@ -41,7 +41,7 @@ public class Record extends Fragment {
 
     CircleImageView start_recording,stop_recording,pause_recording ;
 
-    private static final String LOG_TAG = "AudioRecordTest";
+    private static final String LOG_TAG = "recordzee";
     private static final int REQUEST_RECORD_AUDIO_PERMISSION = 200;
     private static String fileName = null;
 
@@ -50,7 +50,6 @@ public class Record extends Fragment {
 
     private MediaPlayer player = null;
 
-    // Requesting permission to RECORD_AUDIO
     private boolean permissionToRecordAccepted = false;
     private String [] permissions = {Manifest.permission.RECORD_AUDIO};
 
@@ -75,7 +74,6 @@ public class Record extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_record, container, false);
     }
 
@@ -101,7 +99,6 @@ public class Record extends Fragment {
             @Override
             public void onClick(View v) {
 
-                // Record to the external cache directory for visibility
                 fileName = getActivity().getExternalCacheDir().getAbsolutePath();
                 fileName += "/aud_rec_"+System.currentTimeMillis()+".3gp";
 
@@ -137,7 +134,11 @@ public class Record extends Fragment {
                 permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                 break;
         }
-        if (!permissionToRecordAccepted ) getActivity().finish();
+        if (!permissionToRecordAccepted )
+        {
+            Toast.makeText(getActivity(),"Permission required to run the app",Toast.LENGTH_SHORT).show();
+            getActivity().finish();
+        }
 
     }
 

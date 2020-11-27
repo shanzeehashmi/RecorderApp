@@ -14,19 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.zee.recorderapp.MainActivity;
-import com.zee.recorderapp.MyApplication;
 import com.zee.recorderapp.R;
 import com.zee.recorderapp.adapter.HistoryRecyclerAdapter;
 import com.zee.recorderapp.db.Recording;
 import com.zee.recorderapp.repository.Repository;
 import com.zee.recorderapp.viewmodels.HistoryViewModel;
 
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +28,6 @@ public class History extends Fragment implements HistoryRecyclerAdapter.Recordin
     List<Recording> recordings = new ArrayList<>() ;
     HistoryViewModel historyViewModel ;
     ProgressBar progress_circular ;
-    Repository repository ;
 
 
 
@@ -56,7 +48,6 @@ public class History extends Fragment implements HistoryRecyclerAdapter.Recordin
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_history, container, false);
     }
 
@@ -77,7 +68,6 @@ public class History extends Fragment implements HistoryRecyclerAdapter.Recordin
 
         historyViewModel.getProcessing().observe(this,processing->{
 
-            Log.i("Historyzeeeeee","processing value changed") ;
 
             if(processing)
             {
@@ -91,8 +81,6 @@ public class History extends Fragment implements HistoryRecyclerAdapter.Recordin
         });
 
     historyViewModel.getData().observe(this,data->{
-
-        Log.i("value_changed","yesssssssss " +data.size()) ;
 
         int size = recordings.size() ;
         recordings.clear();

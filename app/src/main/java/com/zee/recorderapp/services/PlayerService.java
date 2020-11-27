@@ -43,8 +43,6 @@ public class PlayerService extends Service  {
     private static final String CHANNEL_NAME = "player service";
 
 
-    MutableLiveData<Integer> duration_remaining  ;
-    int total_duration ;
 
     private MediaPlayer player = null;
 
@@ -61,12 +59,6 @@ public class PlayerService extends Service  {
         public PlayerService getService() {
             return PlayerService.this;
         }
-    }
-
-
-    public LiveData<Integer> remaining_duaration()
-    {
-        return duration_remaining ;
     }
 
 

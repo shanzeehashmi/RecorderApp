@@ -11,7 +11,6 @@ import com.zee.recorderapp.MyApplication;
 import com.zee.recorderapp.db.Recording;
 import com.zee.recorderapp.repository.Repository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryViewModel extends AndroidViewModel {
